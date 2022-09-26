@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style1.css">
+  <title>TIMETABLE</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" ></script>
+</head>
+<body>
+  <header class="cd-main-header text-center flex flex-column flex-center">
+    <h1 class="text-xl">TIMETABLE</h1>
+  </header>
+  <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule" id="page">
+    <div class="cd-schedule__timeline">
+      <ul>
+        <li><span>09:00</span></li>
+        <li><span>09:30</span></li>
+        <li><span>10:00</span></li>
+        <li><span>10:30</span></li>
+        <li><span>11:00</span></li>
+        <li><span>11:30</span></li>
+        <li><span>12:00</span></li>
+        <li><span>12:30</span></li>
+        <li><span>13:00</span></li>
+        <li><span>13:30</span></li>
+        <li><span>14:00</span></li>
+        <li><span>14:30</span></li>
+        <li><span>15:00</span></li>
+        <li><span>15:30</span></li>
+        <li><span>16:00</span></li>
+        <li><span>16:30</span></li>
+        <li><span>17:00</span></li>
+      </ul>
+    </div> 
+  
+    <div class="cd-schedule__events" id="invoice">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="10:00" data-event="event-1" >
+                <em class="cd-schedule__name"><%= arr[0][0] %> </em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="11:00" data-event="event-2">
+                <em class="cd-schedule__name"><%= arr[0][1] %>  </em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="11:00" data-end="12:00" data-event="event-3" >
+                <em class="cd-schedule__name"><%= arr[0][2] %> </em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="12:00" data-end="13:00" data-event="event-4" >
+                <em class="cd-schedule__name"><%= arr[0][3] %> </em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="14:00" data-event="" >
+                <em class="cd-schedule__name"></em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="14:00" data-end="15:00" data-event="event-5" >
+                <em class="cd-schedule__name"><%= arr[0][4] %> </em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="15:00" data-end="16:00" data-event="event-6" >
+                <em class="cd-schedule__name"><%= arr[0][5] %> </em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="17:00" data-event="event-7" >
+                <em class="cd-schedule__name"><%= arr[0][6] %> </em>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="10:00" data-event="event-1" >
+                <em class="cd-schedule__name"><%= arr[1][0] %></em>
+              </a>
+            </li>
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="11:00" data-event="event-2" >
+                <em class="cd-schedule__name"><%= arr[1][1] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="11:00" data-end="12:00" data-event="event-3" >
+                <em class="cd-schedule__name"><%= arr[1][2] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="12:00" data-end="13:00" data-event="event-4" >
+                <em class="cd-schedule__name"><%= arr[1][3] %> </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="14:00" data-event="" >
+                <em class="cd-schedule__name"></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="14:00" data-end="15:00" data-event="event-5" >
+                <em class="cd-schedule__name"><%= arr[1][4] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="15:00" data-end="16:00" data-event="event-6" >
+                <em class="cd-schedule__name"><%= arr[1][5] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="17:00" data-event="event-7" >
+                <em class="cd-schedule__name"><%= arr[1][6] %></em>
+              </a>
+            </li> 
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="10:00" data-event="event-1" >
+                <em class="cd-schedule__name"><%= arr[2][0] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="11:00" data-event="event-2" >
+                <em class="cd-schedule__name"><%= arr[2][1] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="11:00" data-end="12:00" data-event="event-3" >
+                <em class="cd-schedule__name"><%= arr[2][2] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="12:00" data-end="13:00" data-event="event-4" >
+                <em class="cd-schedule__name"><%= arr[2][3] %></em>
+              </a>
+            </li>
+            
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="14:00" data-event="" >
+                <em class="cd-schedule__name"></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="14:00" data-end="15:00" data-event="event-5" >
+                <em class="cd-schedule__name"><%= arr[2][4] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="15:00" data-end="16:00" data-event="event-6" >
+                <em class="cd-schedule__name"><%= arr[2][5] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="17:00" data-event="event-7" >
+                <em class="cd-schedule__name"><%= arr[2][6] %></em>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="10:00" data-event="event-1" >
+                <em class="cd-schedule__name"><%= arr[3][0] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="11:00" data-event="event-2" >
+                <em class="cd-schedule__name"><%= arr[3][1] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="11:00" data-end="12:00" data-event="event-3" >
+                <em class="cd-schedule__name"><%= arr[3][2] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="12:00" data-end="13:00" data-event="event-4" >
+                <em class="cd-schedule__name"><%= arr[3][3] %></em>
+              </a>
+            </li>
+            
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="14:00" data-event="" >
+                <em class="cd-schedule__name"></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="14:00" data-end="15:00" data-event="event-5" >
+                <em class="cd-schedule__name"><%= arr[3][4] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="15:00" data-end="16:00" data-event="event-6" >
+                <em class="cd-schedule__name"><%= arr[3][5] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="17:00" data-event="event-7" >
+                <em class="cd-schedule__name"><%= arr[3][6] %></em>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="10:00" data-event="event-1" >
+                <em class="cd-schedule__name"><%= arr[4][0] %></em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="11:00" data-event="event-2" >
+                <em class="cd-schedule__name"><%= arr[4][1] %></em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="11:00" data-end="12:00" data-event="event-3" >
+                <em class="cd-schedule__name"><%= arr[4][2] %></em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="12:00" data-end="13:00" data-event="event-4" >
+                <em class="cd-schedule__name"><%= arr[4][3] %></em>
+              </a>
+            </li>
+            
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="14:00" data-event="" >
+                <em class="cd-schedule__name"></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="14:00" data-end="15:00" data-event="event-5" >
+                <em class="cd-schedule__name"><%= arr[4][4] %></em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="15:00" data-end="16:00" data-event="event-6" >
+                <em class="cd-schedule__name"><%= arr[4][5] %></em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="17:00" data-event="event-7" >
+                <em class="cd-schedule__name"><%= arr[4][6] %></em>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="cd-schedule-modal"></div> 
+  </div>
+  <div class="container">
+    <button id="btn" onclick="requestDesktopSite()" >
+        <p id="btnText"><em><b>Download</b></em></p>
+        <div class="check-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+        </div>
+    </button>
+  </div>
+<script type="text/javascript">
+    function requestDesktopSite(){
+      if(document.getElementsByTagName('meta')['viewport'].content=='width= 1440px;'){
+       document.getElementsByTagName('meta')['viewport'].content='width= 1440px;';
+      }else{
+       document.getElementsByTagName('meta')['viewport'].content='width= 1440px;';
+      }
+      const btn = document.querySelector("#btn");
+      const btnText = document.querySelector("#btnText");
+
+      btnText.innerHTML = "Thanks";
+      btn.classList.add("active");
+      var delayInMilliseconds = 250; 
+
+      setTimeout(function() {
+			  	const invoice = this.document.getElementById("page");
+			  	console.log(page);
+			  	console.log(window);
+			  	var opt = {
+			  		margin: 0,
+			  		filename:'timetable.pdf',
+			  		image: { type: 'jpeg', quality: 0.98 },
+			  		html2canvas: { scale: 2 },
+			  		jsPDF: { unit: 'px', format: [1000,1000], orientation: 'landscape' }
+			  	};
+			  	html2pdf().from(page).set(opt).save();
+      }, delayInMilliseconds);
+
+      setTimeout(function() {
+        if(document.getElementsByTagName('meta')['viewport'].content=='width= 1440px;'){
+         document.getElementsByTagName('meta')['viewport'].content='width= 400px;';
+        }
+      }, delayInMilliseconds);
+    } 
+</script>
+  <script src="/js/util.js"></script> 
+  <script src="/js/main1.js"></script>
+</body>
+</html>

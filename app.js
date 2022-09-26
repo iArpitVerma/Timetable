@@ -156,7 +156,7 @@ app.post("/" ,function(req,res){
             arr[3][5] = arr[3][6] = "EC2231 Lab SRC GMK/AP";
         }
     }
-    res.render('result.ejs', {arr:arr, labGroup:labGroup, pool:pool,pool_lab:pool_lab});
+    res.render('result.ejs', {arr:arr});
 });
 
 app.listen(process.env.PORT || 3000,function(){

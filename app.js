@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.text({ type: "text/html" }));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
-app.use(favicon(path.join(__dirname,'public', "/timetable.ico")));
+app.use(favicon(path.join(__dirname,'public', "/favicon.ico")));
 
 app.set('view engine', 'ejs');
 app.get("/" ,function(req,res){
@@ -156,7 +156,7 @@ app.post("/" ,function(req,res){
             arr[3][5] = arr[3][6] = "EC2231 Lab SRC GMK/AP";
         }
     }
-    res.render('result.ejs', {arr:arr, labGroup:labGroup, pool:pool, pool_lab:pool_lab});
+    res.render('result.ejs', {arr:arr, labGroup:labGroup, pool:pool,pool_lab:pool_lab});
 });
 
 app.listen(process.env.PORT || 3000,function(){

@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
 const ejs = require('ejs');
-const favicon = require('serve-favicon');
+// const favicon = require('serve-favicon');
 const path = require('path');
 const app = express();
 const { JSDOM } = require( "jsdom" );
@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.text({ type: "text/html" }));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
-app.use(favicon(path.join(__dirname,'public', "/favicon.ico")));
+// app.use(favicon(path.join(__dirname,'public', "/favicon.ico")));
 
 app.set('view engine', 'ejs');
 app.get("/" ,function(req,res){

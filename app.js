@@ -83,7 +83,7 @@ app.post("/" ,function(req,res){
         arr[4][1] = arr[4][2] = "EC1351 Lab9 PL";
     }else if(labGroup == "g3"){
         arr[2][0] = arr[2][1] = "EC1351 Lab9 PL/JKEDIA";
-        arr[3][1] = "EC1352 T L25 DD";
+        arr[3][6] = "EC1352 T L25 DD";
         arr[4][1] = arr[4][2] = "EC1353 Lab7 AJ";
     }else if(labGroup == "g4"){
         arr[1][5] = arr[1][6] = "EC1353 Lab7 DB/RM"; 
@@ -100,7 +100,7 @@ app.post("/" ,function(req,res){
     }else if(labGroup == "g7"){
         arr[0][0] = arr[0][1] = "EC1353 Lab7 AJ/SS";
         arr[3][5] = arr[3][6] = "EC1351 Lab9 NG/ANCHAL";
-        arr[4][1] = "EC1352 T L25 AP";
+        arr[4][1] = "EC1352 T L30 AP";
     }else if(labGroup == "g8"){
         arr[2][6] = "EC1352 T L24 AP";
         arr[3][1] = arr[3][2] = "EC1353 Lab7 AJ/SS";
@@ -130,31 +130,33 @@ app.post("/" ,function(req,res){
         }
     }else if(pool == "Embedded"){
         arr[0][5] = "EC2224 L31 SD";
+        arr[0][6] = "EC2222 L24 GMK";
         arr[1][1] = "EC2224 L31 SD";
-        arr[2][2] = "EC2222 L25 GMK";
-        arr[2][4] = "EC2224 L31 SD";
+        arr[2][2] = "EC2222 L30 GMK";
+        arr[2][4] = "EC2224 L30 SD";
+        arr[3][0] = "EC2222 T L20 GMK";
         arr[3][3] = "EC2222 L31 GMK";
         arr[4][3] = "EC2222 L30 GMK";
         if(pool_lab == "g1"){
             arr[4][0] = arr[4][1] = "EC2224 Lab6 SD/RM";
-            arr[4][2] = "EC2222 T L20 GMK";
         }else if(pool_lab == "g2"){
-            arr[4][0] = "EC2222 T L25 GMK";
             arr[4][5] = arr[4][6] = "EC2224 Lab6 SD/SS";
         }
     }else if(pool == "VLSI"){
         arr[1][0] = "EC2234 L31 JKEDIA";
         arr[2][2] = "EC2234 L20 JKEDIA";
-        arr[2][4] = "EC2231 L24 GMK";
-        arr[3][0] = "EC2231 L25 GMK";
+        arr[2][4] = "EC2231 L25 GMK";
         arr[3][3] = "EC2234 L20 JKEDIA";
         arr[3][4] = "EC2231 L24 GMK";
-        if(pool_lab == "g1"){
-            arr[0][5] = arr[0][6] = "EC2234 Lab8 JKEDIA";
-            arr[2][5] = arr[2][6] = "EC2231 Lab SRC GMK";
-        }else if(pool_lab == "g2"){
-            arr[3][5] = arr[3][6] = "EC2231 Lab SRC GMK/AP";
-        }
+        arr[4][3] = "EC2231 L25 GMK";
+        arr[0][5] = arr[0][6] = "EC2234 Lab8 JKEDIA";
+        arr[2][5] = arr[2][6] = "EC2231 Lab SRC GMK";
+        arr[3][5] = arr[3][6] = "EC2231 Lab SRC GMK/AP";
+        // if(pool_lab == "g1"){
+
+        // }else if(pool_lab == "g2"){
+
+        // }
     }
     res.render('result.ejs', {arr:arr});
 });

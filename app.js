@@ -88,7 +88,7 @@ app.post("/" ,function(req,res){
     }else if(labGroup == "g4"){
         arr[1][5] = arr[1][6] = "EC1353 Lab7 DB/RM"; 
         arr[2][5] = arr[2][6] = "EC1351 Lab9 PL/NG";
-        arr[4][2] = "EC1352 T L25 DD";
+        arr[3][1] = "EC1352 T L25 DD";
     }else if(labGroup == "g5"){
         arr[1][5] = arr[1][6] = "EC1351 Lab9 PL/NG";
         arr[2][5] = arr[2][6] = "EC1353 Lab7 AJ/SS";

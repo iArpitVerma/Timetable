@@ -74,25 +74,25 @@ app.post("/" ,function(req,res){
 
     // Class Lab/Tut Groups
     if(labGroup == "g1"){
-        arr[0][0] = arr[0][1] = "EC1351 Lab9 PL";
         arr[3][5] = "EC1352 T L25 DD";
+        arr[4][1] = arr[4][2] = "EC1351 Lab9 PL";
         arr[4][5] = arr[4][6] = "EC1353 Lab7 SHANOL/DB";
     }else if(labGroup == "g2"){
         arr[0][1] = "EC1352 T L25 DD";
-        arr[2][0] = arr[2][1] = "EC1353 Lab7 DB/AJ";
-        arr[4][1] = arr[4][2] = "EC1351 Lab9 PL";
+        arr[1][5] = arr[1][6] = "EC1353 Lab7 DB/RM";
+        arr[2][0] = arr[2][1] = "EC1351 Lab9 PL";
     }else if(labGroup == "g3"){
-        arr[2][0] = arr[2][1] = "EC1351 Lab9 PL/JKEDIA";
+        arr[0][0] = arr[0][1] = "EC1351 Lab9 PL";
         arr[3][6] = "EC1352 T L25 DD";
         arr[4][1] = arr[4][2] = "EC1353 Lab7 AJ";
-    }else if(labGroup == "g4"){
-        arr[1][5] = arr[1][6] = "EC1353 Lab7 DB/RM"; 
+    }else if(labGroup == "g4"){ 
+        arr[2][0] = arr[2][1] = "EC1353 Lab7 DB/AJ";
         arr[2][5] = arr[2][6] = "EC1351 Lab9 PL/NG";
         arr[3][1] = "EC1352 T L25 DD";
     }else if(labGroup == "g5"){
         arr[1][5] = arr[1][6] = "EC1351 Lab9 PL/NG";
         arr[2][5] = arr[2][6] = "EC1353 Lab7 AJ/SS";
-        arr[4][2] = "EC1352 T L30 AP";
+        arr[4][5] = "EC1352 T L24 AP";
     }else if(labGroup == "g6"){
         arr[1][6] = "EC1352 T L25 AP";
         arr[3][1] = arr[3][2] = "EC1351 Lab9 PL";
@@ -134,9 +134,8 @@ app.post("/" ,function(req,res){
         arr[1][1] = "EC2224 L31 SD";
         arr[2][2] = "EC2222 L30 GMK";
         arr[2][4] = "EC2224 L30 SD";
-        arr[3][0] = "EC2222 T L20 GMK";
         arr[3][3] = "EC2222 L31 GMK";
-        arr[4][3] = "EC2222 L30 GMK";
+        arr[4][2] = "EC2222 T L20 GMK";
         if(pool_lab == "g1"){
             arr[4][0] = arr[4][1] = "EC2224 Lab6 SD/RM";
         }else if(pool_lab == "g2"){

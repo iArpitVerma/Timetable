@@ -149,13 +149,11 @@ app.post("/" ,function(req,res){
         arr[3][4] = "EC2231 L24 GMK";
         arr[4][3] = "EC2231 L25 GMK";
         arr[0][5] = arr[0][6] = "EC2234 Lab8 JKEDIA";
-        arr[2][5] = arr[2][6] = "EC2231 Lab SRC GMK";
-        arr[3][5] = arr[3][6] = "EC2231 Lab SRC GMK/AP";
-        // if(pool_lab == "g1"){
-
-        // }else if(pool_lab == "g2"){
-
-        // }
+        if(pool_lab == "g1"){
+            arr[2][5] = arr[2][6] = "EC2231 Lab SRC GMK";
+        }else if(pool_lab == "g2"){
+            arr[3][5] = arr[3][6] = "EC2231 Lab SRC GMK/AP";
+        }
     }
     res.render('result.ejs', {arr:arr});
 });
